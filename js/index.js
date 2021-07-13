@@ -21,3 +21,10 @@ if (userAge <= 17) {
 	let messageTwo = '¡Excelente ' + userName + '! Gracias por ingresar tus datos.'
 	alert(messageTwo)
 }
+
+for (let i = 1; i <= 6; i++) {
+	let toDoList = prompt(
+		'¡Muy bien ' + userName + '! Hagamos una lista de sitios para salir a pasear en tu cuidad.'
+	)
+	alert('Muy buena elección ' + toDoList)
+}
