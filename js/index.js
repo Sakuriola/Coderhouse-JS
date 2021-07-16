@@ -1,17 +1,26 @@
 /** @format */
 
 let userName = prompt('Por favor, ingresa tu nombre de usuario')
-let userAge = parseInt(prompt('Por favor, ingresa tu edad'))
+let userAge = parseInt(prompt('Por favor, ingresa tu año de nacimiento'))
+const currentAge = 2021
 
-if (userAge <= 17) {
-	alert('Debes ser mayor de edad para realizar esta actividad.')
+function restar(currentAge, userAge) {
+	return currentAge - userAge
+}
+
+let result = restar(currentAge, userAge)
+
+if (userAge >= 2004) {
+	alert('Debes ser mayor de ' + result + ' años para realizar esta actividad.')
 } else {
 	let userColor = prompt('Por favor, ingrese su color favorito')
 	let messageOne =
 		'¡Hola ' +
 		userName +
-		'! Tienes ' +
+		'! Naciste en ' +
 		userAge +
+		', tienes ' +
+		result +
 		' años y tu color favorito es el ' +
 		userColor +
 		'. Si es correcto, por favor selecciona "Aceptar"'
@@ -22,7 +31,7 @@ if (userAge <= 17) {
 	alert(messageTwo)
 }
 
-for (let i = 1; i <= 6; i++) {
+for (let i = 1; i <= 3; i++) {
 	let toDoList = prompt(
 		'¡Muy bien ' + userName + '! Hagamos una lista de sitios para salir a pasear en tu cuidad.'
 	)
