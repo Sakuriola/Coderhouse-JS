@@ -37,3 +37,75 @@ for (let i = 1; i <= 3; i++) {
 	)
 	alert('Muy buena elección ' + toDoList)
 }
+
+let product01 = 'Camiseta de Twice'
+let product02 = 'CD de Twice'
+let product03 = 'Photocard de Twice'
+let product04 = 'Llavero de Twice'
+let product05 = 'Mousepad de Twice'
+let product06 = 'Lightstick de Twice'
+
+let price01 = 18
+let price02 = 79
+let price03 = 22
+let price04 = 3
+let price05 = 7
+let price06 = 250
+
+let userEnter = parseInt(
+	prompt(
+		'Escoge el número del producto que quieras consultar: \n 1) Camiseta de Twice \n 2) CD de Twice \n 3) Photocard de Twice \n 4) Llavero de Twice \n 5) Mousepad de Twice \n 6) Lightstick de Twice'
+	)
+)
+
+class Member {
+	constructor(nombre, edad, rol, nacionalidad, apodo) {
+		this.name = nombre
+		this.age = edad
+		this.role = rol
+		this.nationality = nacionalidad
+		this.nickname = apodo
+	}
+
+	memberList() {
+		console.log(
+			this.name +
+				' tiene ' +
+				this.age +
+				' años, es ' +
+				this.role +
+				' en TWICE, su nacionalidad es ' +
+				this.nationality +
+				' y sus apodos son: ' +
+				this.nickname +
+				'.'
+		)
+	}
+}
+
+let jiHyo = new Member(
+	'Park Ji Hyo',
+	24,
+	'líder, vocalista y bailarina',
+	'coreana',
+	'Mic Girl, Leader y God Jihyo'
+)
+jiHyo.memberList()
+
+let nayeon = new Member(
+	'Im Na Yeon',
+	25,
+	'cantante, bailarina y modelo',
+	'coreana',
+	'princess Nayeon, Bunny Smile y rabbit Nayeon'
+)
+nayeon.memberList()
+
+let momo = new Member(
+	'Hirai Momo',
+	24,
+	'cantante, modelo y bailarina',
+	'japonesa',
+	'Momori y dance machine'
+)
+momo.memberList()
