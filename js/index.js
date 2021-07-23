@@ -1,6 +1,6 @@
 /** @format */
 
-let userName = prompt('Por favor, ingresa tu nombre de usuario')
+/* let userName = prompt('Por favor, ingresa tu nombre de usuario')
 let userAge = parseInt(prompt('Por favor, ingresa tu año de nacimiento'))
 const currentAge = 2021
 
@@ -109,3 +109,66 @@ let momo = new Member(
 	'Momori y dance machine'
 )
 momo.memberList()
+
+ */
+
+function capitalize(item) {
+	const lower = item.toLowerCase()
+	return item.charAt(0).toUpperCase() + lower.slice(1)
+}
+
+class Product {
+	constructor(name, price, detail, quantity) {
+		this.name = name
+		this.price = parseFloat(price)
+		this.detail = detail
+		this.quantity = parseInt(quantity)
+	}
+
+	calculateTaxes() {
+		return this.price * 0.12
+	}
+
+	calculateCommission() {
+		return (this.price + this.calculateTaxes()) * 0.2
+	}
+
+	total() {
+		return this.price + this.calculateTaxes() + this.calculateCommission()
+	}
+}
+
+var arrayProducts = []
+do {
+	var check = prompt('Coloque un nombre para su producto o "fin" para finalizar')
+	check = check.toLowerCase()
+	if (check === 'fin') {
+		break
+	} else {
+		productName = capitalize(check)
+		var productPrice = prompt('Ingrese el precio de su producto')
+		var productDetail = prompt('Ingrese el detalle de su producto')
+		var productQuantity = prompt('Ingrese la cantidad deseada')
+		arrayProducts.push(new Product(productName, productPrice, productDetail, productQuantity))
+	}
+} while (check !== 'fin')
+
+console.log(arrayProducts)
+
+for (var product of arrayProducts) {
+	document.write('<h1>El producto que usted ha ingresado es: ' + product.name + '</h1>')
+	document.write(
+		'<h3>El detalle del producto que usted ha ingresado es: ' + product.detail + '</h3>'
+	)
+	document.write(
+		'<h3>El precio del producto que usted ha ingresado es: $' +
+			product.price * product.quantity +
+			'</h3>'
+	)
+	document.write(
+		'<h3>La cantidad de productos que usted ha ingresado es: ' + product.quantity + '</h3>'
+	)
+	document.write('<h3>Impuestos: $' + product.calculateTaxes() * product.quantity + '</h3>')
+	document.write('<h3>Comisión: $' + product.calculateCommission() * product.quantity + '</h3>')
+	document.write('<h3>Total: $' + product.total() * product.quantity + '</h3>')
+}
