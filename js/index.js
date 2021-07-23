@@ -161,7 +161,13 @@ for (var product of arrayProducts) {
 		'<h3>El detalle del producto que usted ha ingresado es: ' + product.detail + '</h3>'
 	)
 	document.write(
-		'<h3>El precio del producto que usted ha ingresado es: $' +
+		'<h3>El precio del producto que usted ha ingresado es: $' + product.price + '</h3>'
+	)
+	document.write(
+		'<h3>La cantidad de productos que usted ha ingresado es: ' + product.quantity + '</h3>'
+	)
+	document.write(
+		'<h3>El precio de los productos que usted ha ingresado es: $' +
 			product.price * product.quantity +
 			'</h3>'
 	)
@@ -171,4 +177,24 @@ for (var product of arrayProducts) {
 	document.write('<h3>Impuestos: $' + product.calculateTaxes() * product.quantity + '</h3>')
 	document.write('<h3>Comisión: $' + product.calculateCommission() * product.quantity + '</h3>')
 	document.write('<h3>Total: $' + product.total() * product.quantity + '</h3>')
+}
+
+var fewStock = arrayProducts.filter((item) => item.quantity < 3)
+
+document.write('<h1>Productos con poco stock:</h1>')
+for (var product of fewStock) {
+	if (product.quantity > 0) {
+		document.write('<h4>El producto es: ' + product.name + '</h4>')
+		document.write('<h4>El detalle del producto es: ' + product.detail + '</h4>')
+		document.write('<h4>La cantidad del producto es: ' + product.quantity + '</h4>')
+	}
+}
+
+var noStock = arrayProducts.filter((item) => item.quantity === 0)
+
+document.write('<h1>Productos sin stock:</h1>')
+for (var product of noStock) {
+	document.write('<h4>El producto es: ' + product.name + '</h4>')
+	document.write('<h4>El detalle del producto es: ' + product.detail + '</h4>')
+	document.write('<h4>La cantidad del producto es: ' + product.quantity + '</h4>')
 }
