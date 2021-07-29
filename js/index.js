@@ -198,3 +198,18 @@ for (var product of noStock) {
 	document.write('<h4>El detalle del producto es: ' + product.detail + '</h4>')
 	document.write('<h4>La cantidad del producto es: ' + product.quantity + '</h4>')
 }
+
+document.write('<h1 class="new-list-title">Lista renovada de productos:</h1>')
+
+for (var product of arrayProducts) {
+	let container = document.createElement('div')
+
+	container.classList.add('product-container')
+
+	container.innerHTML = `<h4 class="product-name">Nombre del producto: ${product.name}</h4>
+												 <h4 class="product-price">Precio del producto: ${product.price}</h4>
+												 <h4 class="product-detail">Detalle del producto: ${product.detail}</h4>
+												 <h4 class="product-quantity">Cantidad del producto: ${product.quantity}</h4>
+											  `
+	document.body.appendChild(container)
+}
