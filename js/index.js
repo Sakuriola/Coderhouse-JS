@@ -110,7 +110,7 @@ let momo = new Member(
 )
 momo.memberList()
 
- */
+
 
 function capitalize(item) {
 	const lower = item.toLowerCase()
@@ -213,3 +213,36 @@ for (var product of arrayProducts) {
 											  `
 	document.body.appendChild(container)
 }
+ */
+
+var buttonOne = document.getElementById('button_one')
+
+buttonOne.addEventListener('click', function () {
+	var newPara = document.createElement('p')
+	var newText = document.createTextNode(
+		'Párrafo de 1 click: Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in'
+	)
+
+	newPara.appendChild(newText)
+	newPara.className = 'text-one'
+
+	var container = document.getElementsByClassName('second-container')[0]
+
+	container.appendChild(newPara)
+})
+
+var botonTwo = document.getElementById('button_two')
+
+botonTwo.addEventListener('dblclick', function () {
+	var newPara = document.createElement('p')
+	var newText = document.createTextNode(
+		'Párrafo de 2 clicks: Wisi forensibus mnesarchum in cum. Per id impetus abhorreant, his no magna definiebas, inani rationibus in quo. Ut vidisse dolores'
+	)
+
+	newPara.appendChild(newText)
+	newPara.className = 'text-two'
+
+	var container = document.getElementsByClassName('second-container')[0]
+
+	container.appendChild(newPara)
+})

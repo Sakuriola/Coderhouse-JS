@@ -5,6 +5,7 @@
 	font-size: 40px;
 	font-weight: 600;
 	margin-bottom: 0;
+	padding-bottom: 50px;
 }
 
 .new-list-title {
@@ -47,4 +48,42 @@
 
 .product-quantity {
 	color: #f4f0ea;
+}
+
+.button-global-container {
+	display: flex;
+}
+
+.button-container {
+	padding: 15px;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	margin: auto;
+	cursor: pointer;
+	background-color: #e6e6fa;
+}
+
+.second-container {
+	padding: 20px 0;
+	width: 100%;
+	max-width: 500px;
+	margin: auto;
+}
+
+.text-one {
+	border-radius: 10px;
+	margin-bottom: 40px;
+	background-color: #636364;
+	color: white;
+	padding: 20px;
+	text-align: center;
+}
+
+.text-two {
+	border-radius: 10px;
+	margin-bottom: 40px;
+	background-color: #d3d3ea;
+	color: black;
+	padding: 20px;
+	text-align: center;
 }
