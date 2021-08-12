@@ -215,7 +215,7 @@ for (var product of arrayProducts) {
 }
  */
 
-var buttonOne = document.getElementById('button_one')
+/* var buttonOne = document.getElementById('button_one')
 
 buttonOne.addEventListener('click', function () {
 	var newPara = document.createElement('p')
@@ -245,4 +245,70 @@ botonTwo.addEventListener('dblclick', function () {
 	var container = document.getElementsByClassName('second-container')[0]
 
 	container.appendChild(newPara)
-})
+}) */
+
+/* Function what gets data localed into json file */
+const GetUser = async () => {
+	let dataUser
+	await fetch('./json/data.json')
+		.then((response) => response.json())
+		.then((data) => {
+			dataUser = data
+		})
+		.catch((e) => console.log(e))
+	return dataUser
+}
+
+;(async () => {
+	/* Call the function GetUser, is asyncronous, and return the cdata stored in the json */
+	const data = await GetUser()
+	/* Set the data in a localstorage variable named: dataUser */
+	localStorage.setItem('dataUser', JSON.stringify(data))
+
+	var button_three = document.getElementById('button_three')
+
+	/* Function to get user data and display with action button */
+	button_three.addEventListener('click', function () {
+		/* Call localstorage named dataUser and store in a variable named dataUser */
+		const dataUser = JSON.parse(localStorage.getItem('dataUser'))
+
+		/* Display and paint the variable with a create element */
+		var newParagraphOne = document.createElement('p')
+		var newTextOne = document.createTextNode(
+			`${dataUser.personal_information.name} ${dataUser.personal_information.last_name}`
+		)
+
+		var newParagraphTwo = document.createElement('p')
+		var newTextTwo = document.createTextNode(`${dataUser.personal_information.age}`)
+
+		for (var works of dataUser.works) {
+			let workContainer = document.createElement('div')
+
+			workContainer.classList.add('work-container')
+
+			for (var jobPerformance of works.performance) {
+				var jobs = `<h4>${jobPerformance.HTML5}</h4>
+										<h4>${jobPerformance.CSS}</h4>
+										<h4>${jobPerformance.JS}</h4>
+										<h4>${jobPerformance.ReactJS}</h4>`
+			}
+
+			workContainer.innerHTML = `<h3 class="job-name">Nombre del trabajo: ${works.name}</h3>
+												 <h4 class="job-performance">Precio del producto: ${works.position}</h4>
+												 ${jobs}
+												`
+			document.body.appendChild(workContainer)
+		}
+
+		newParagraphOne.appendChild(newTextOne)
+		newParagraphTwo.appendChild(newTextTwo)
+
+		newParagraphOne.className = 'user-text-one'
+		newParagraphTwo.className = 'user-text-two'
+
+		var containerPara = document.getElementsByClassName('container-three')[0]
+
+		containerPara.appendChild(newParagraphOne)
+		containerPara.appendChild(newParagraphTwo)
+	})
+})()

@@ -1,0 +1,47 @@
+{
+	"personal_information": {
+		"username": "fabidyan",
+		"user_id": "001",
+		"name": "Fabiorlan",
+		"last_name": "D'yan",
+		"age": "29 Años"
+	},
+	"works": [
+		{
+			"name": "Estudio57",
+			"position": "Maquetadora Web",
+			"performance": [
+				{
+					"HTML5": "Nivel de HTML5: Medio",
+					"CSS": "Nivel de CSS: Medio",
+					"JS": "Nivel de JS: Bajo",
+					"ReactJS": "Nivel de ReactJS: Medio"
+				}
+			]
+		},
+		{
+			"name": "Favy Clothing",
+			"position": "Maquetadora Web",
+			"performance": [
+				{
+					"HTML5": "Nivel de HTML5: Medio",
+					"CSS": "Nivel de CSS: Medio",
+					"JS": "Nivel de JS: N/A",
+					"ReactJS": "Nivel de ReactJS: N/A"
+				}
+			]
+		},
+		{
+			"name": "Laniakea Group",
+			"position": "Maquetadora Web",
+			"performance": [
+				{
+					"HTML5": "Nivel de HTML5: Medio",
+					"CSS": "Nivel de CSS: Medio",
+					"JS": "Nivel de JS: Bajo",
+					"ReactJS": "Nivel de ReactJS: Medio"
+				}
+			]
+		}
+	]
+}

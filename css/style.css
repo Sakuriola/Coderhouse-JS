@@ -87,3 +87,31 @@
 	padding: 20px;
 	text-align: center;
 }
+
+.container-three {
+	border-radius: 10px;
+	background-color: #636364;
+	color: white;
+	text-align: center;
+	margin: 20px auto 0;
+	width: 100%;
+	max-width: 350px;
+}
+
+.user-text-one,
+.user-text-two,
+.user-text-three {
+	padding: 10px 0;
+	margin: 0;
+}
+
+.work-container {
+	border-radius: 10px;
+	background-color: #d3d3ea;
+	color: black;
+	padding: 20px;
+	text-align: center;
+	margin: 20px auto;
+	width: 100%;
+	max-width: 350px;
+}
