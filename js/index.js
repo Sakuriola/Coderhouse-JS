@@ -247,7 +247,6 @@ botonTwo.addEventListener('dblclick', function () {
 	container.appendChild(newPara)
 }) */
 
-/* Function what gets data localed into json file */
 const GetUser = async () => {
 	let dataUser
 	await fetch('./json/data.json')
@@ -260,19 +259,14 @@ const GetUser = async () => {
 }
 
 ;(async () => {
-	/* Call the function GetUser, is asyncronous, and return the cdata stored in the json */
 	const data = await GetUser()
-	/* Set the data in a localstorage variable named: dataUser */
 	localStorage.setItem('dataUser', JSON.stringify(data))
 
 	var button_three = document.getElementById('button_three')
 
-	/* Function to get user data and display with action button */
 	button_three.addEventListener('click', function () {
-		/* Call localstorage named dataUser and store in a variable named dataUser */
 		const dataUser = JSON.parse(localStorage.getItem('dataUser'))
 
-		/* Display and paint the variable with a create element */
 		var newParagraphOne = document.createElement('p')
 		var newTextOne = document.createTextNode(
 			`${dataUser.personal_information.name} ${dataUser.personal_information.last_name}`
