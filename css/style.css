@@ -52,6 +52,10 @@
 
 .button-global-container {
 	display: flex;
+	margin: auto;
+	max-width: 1000px;
+	display: flex;
+	align-items: center;
 }
 
 .button-container {
@@ -114,4 +118,22 @@
 	margin: 20px auto;
 	width: 100%;
 	max-width: 350px;
+}
+
+.container-four {
+	border-radius: 10px;
+	background-color: #1e6793;
+	color: white;
+	text-align: center;
+	margin: 20px auto 0;
+	width: 100%;
+	max-width: 350px;
+}
+
+.checkbox-label {
+	cursor: pointer;
+}
+
+.checkbox-input {
+	cursor: pointer;
 }
