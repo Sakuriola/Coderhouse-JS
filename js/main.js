@@ -15,4 +15,23 @@ $(document).ready(function () {
 			alert('Desmarcado (Se volverá a el color del fondo predeterminado)')
 		}
 	})
+
+	$('#chained-animation').click(function () {
+		$('#div1').fadeIn(1000)
+		$('#div2').fadeIn(2000)
+		$('#div3').fadeIn(3000)
+		$('#div4').fadeIn(hideAway())
+	})
+
+	hideAway = () => {
+		$('#div3').fadeOut(1000, hideAwayTwo())
+	}
+
+	hideAwayTwo = () => {
+		$('#div2').fadeOut(2000, hideAwayThree())
+	}
+
+	hideAwayThree = () => {
+		$('#div1').fadeOut(3000)
+	}
 })
