@@ -1,5 +1,14 @@
 /** @format */
 
+body {
+	width: 100%;
+	margin: 0;
+}
+
+.coder-js-project-global-container {
+	padding: 10px;
+}
+
 .coder-js-project-main-title {
 	color: #0068ffa8;
 	font-size: 40px;
@@ -136,4 +145,46 @@
 
 .checkbox-input {
 	cursor: pointer;
+}
+
+#hp_output {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.api-global-container {
+	width: 100%;
+	max-width: 33.33333333%;
+}
+
+.api-main-container {
+	margin: 20px;
+	text-align: center;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	padding: 20px;
+	cursor: pointer;
+	background-color: #fbfbfb;
+	filter: grayscale();
+	transition: 0.3s ease;
+}
+
+.api-main-container:hover {
+	filter: none;
+	transition: 0.3s ease;
+}
+
+.api-image-container {
+	width: 100%;
+	overflow: hidden;
+	max-width: 295px;
+	height: 295px;
+	margin: auto;
+	border-radius: 100%;
+}
+
+.api-image {
+	position: relative;
+	width: 100%;
 }
